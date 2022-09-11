@@ -21,7 +21,8 @@ McKay explains it in: https://users.cecs.anu.edu.au/~bdm/data/formats.html
 
 ## Setup files 
 To facilitate the work we have divided the graphs into subsets by vertices and edges
-(v,e)
+(v,e).
+
 Even so, there are files with more than a million graphs. For files with graphs of eleven 11 vertices with more than a million graphs, we have created a folder that contains several files of at most a million graphs.
 The first of these files are
 11v17e-001 and 11v17e-002.
@@ -50,6 +51,7 @@ To save time simultaneous executions of Th.cpp can be performed. Choosing the op
 
 This is part of the suggested list of Th to run
 Th1 , Th2 , ... , Th10 ,
+
 Th 11 10 ,
 Th 11 11 ,
 ... ,
