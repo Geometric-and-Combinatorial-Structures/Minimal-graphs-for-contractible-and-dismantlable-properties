@@ -21,7 +21,7 @@ Compiling and running the program [split.cpp](split.cpp) the file structure cont
 
 The working folder is where the cg folder is located. From now on, all graphs are stored in _g6 format.
 
-## Acyclic graphs (simplicial point at view).
+## Acyclic graphs
 We have generated an adaptation of the [Ripser](https://github.com/Ripser/ripser) program to obtain acyclic graphs.
 
 Compiling and running the program [acyclic.cpp](./acyclic.cpp) a structure will be generated with the `ag` folder containing acyclic graphs from the simplicial point at view or, in other words, graphs with trivial homology.
@@ -60,17 +60,15 @@ The suggestion is to run in parallel with a computer using GNU/Linux operating s
 
 At the end of the complete list of executions, the [GetCard_ag.cpp](GetCard_ag.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs and the files `#adV.dat` and `#agVE.dat` will be generated. If so desired, the output of these runs can be downloaded from ag.zip.
 
-## Strog-I-Contractible but Not Strong-I-Contractible by vertices graphs.
+## Strong-I-Contractible but Not Strong-I-Contractible by vertices graphs
 
-Based on the acyclic graphs we will obtain the graphs that are SIC but not SICv, compiling and executing the program GetSpecialG.cpp
-
-12 graphs will be obtained, these are in SpecialG.dat.
+Based on the acyclic graphs we will obtain the graphs that are SIC but not SICv, compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). Then, 12 graphs will be obtained, these are in [SpecialG.dat](SpecialG.dat).
 
 The run takes a few minutes.
 
 ## Ivashchenko's axiom.
-The program V_IA.cpp examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in V_IA.dat
+The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in [V_IA.dat](V_IA.dat).
 
-## Aciclic graphs but not 0-dismantables
-Compiling an running de program ag_Not0Dis.cpp , the 7 graphs are in ag_Not0Dis.dat
+## Acyclic graphs but not 0-dismantables
+Compiling and running de program [ag_Not0Dis.cpp](ag_Not0Dis.cpp), the 7 graphs are in [ag_Not0Dis.dat](ag_Not0Dis.dat).
 
