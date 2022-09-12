@@ -2,7 +2,7 @@
 In this repository is shown how implement the algorithms used in the article
 Minimal Gaphs for contracible and dismatable properties
 (arXiv:2109.06729 [math.CO]).
-This work considers graphs from 1 vertex to 11 vertices.
+This work considers simple connected graphs from 1 vertex to 11 vertices.
 
 ## Connected graphs
 The connected graphs were taken from the well-known repository of Brendan McKay:
