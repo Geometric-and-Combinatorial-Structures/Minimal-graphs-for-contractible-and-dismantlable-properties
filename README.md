@@ -1,33 +1,19 @@
 # Minimal graphs for contractible and dismantlable properties
-In this repository is shown how implement the algorithms used in the article
-Minimal Gaphs for contracible and dismatable properties
-(arXiv:2109.06729 [math.CO]).
-This work considers simple connected graphs from 1 vertex to 11 vertices.
+In this repository is shown how implement the algorithms used in the article Minimal Gaphs for contracible and dismatable properties (arXiv:2109.06729 [math.CO]).
+This work considers simple connected graphs up to 11 vertices.
 
 ## Connected graphs
-The connected graphs were taken from the well-known repository of Brendan McKay:
-https://users.cecs.anu.edu.au/~bdm/data/graphs.html
-contained in the files:
-graph2c.g6
-graph3c.g6
-...
-graph10c.g6
-graph11.g6
-the last two need to be unzipped due to their size.
+The connected graphs were taken from the well-known repository of professor Brendan McKay (avalilable online at https://users.cecs.anu.edu.au/~bdm/data/graphs.html). The files of connected graphs are splited by its numeber of vertices: graph2c.g6, graph3c.g6, ..., graph10c.g6, graph11.g6. The last two files need to be unzipped due to their size.
 
-Remark: the file graph11.g6 is the only one that contains connected and disconnected graphs.
-To understand the g6 format (among other aspects)
-McKay explains it in: https://users.cecs.anu.edu.au/~bdm/data/formats.html
+**Remark**: The file graph11.g6 contains connected and disconnected graphs.
+
+For more details about the g6 format (among other aspects) consult: https://users.cecs.anu.edu.au/~bdm/data/formats.html
 
 ## Setup files 
-To facilitate the work we have divided the graphs into subsets by vertices and edges
-(v,e).
-
-Even so, there are files with more than a million graphs. For files with graphs of  11 vertices with more than a million graphs, we have created a folder that contains several files of at most a million graphs.
-The first of these files are
+To facilitate the work we have divided the graphs into subsets by vertices and edges. Even so, there are files with more than a million graphs. For files with graphs of 11 vertices with more than a million graphs, we have created a folder that contains several files of at most a million graphs. The first of these files are
 11v17e-001 and 11v17e-002.
 
-Additionally we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format _g6. The number of vertices is known because we know which file the graph comes from.
+Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format _g6. The number of vertices is known because we know which file the graph comes from.
 
 Compiling and running the program Split.cpp the file structure contained in the cg folder will be generated  containing the graphs in _g6 format, also the files #cgV.dat and #cgVE.dat containing cardinalities.
 Note: In the code should include the operating system of your choice:
