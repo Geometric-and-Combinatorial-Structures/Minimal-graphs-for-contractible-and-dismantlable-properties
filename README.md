@@ -32,30 +32,32 @@ For the execution of acyclic.cpp the `Flag.dat` file is required, which contains
 
 Simultaneous executions of acyclic.cpp can be performed. Choosing the operating system will also be necessary.
 
-This is part of the suggested list to run
-acyclic1 , acyclic2 , ... , acyclic10 ,
-
-acyclic 11 10 ,
-acyclic 11 11 ,
-... ,
-acyclic 11 16 ,
-acyclic 11 40 ,
-acyclic 11 41 ,
-... ,
-acyclic 11 55 ,
-acyclic 11 17 1 ,
-acyclic 11 17 2 ,
-acyclic 11 18 1 ,
-acyclic 11 18 2 ,
-acyclic 11 18 3 ,
-acyclic 11 18 4 ,
-acyclic 11 19 1 ,
-... ,
-acyclic 11 19 8 ,
-acyclic 11 20 1 ,
-... ,
-acyclic 11 39 2 ,
-...
+This is part of the suggested list to run:<br />
+acyclic1,<br />
+acyclic2,<br />
+... <br />
+acyclic10,<br />
+acyclic 11 10,<br />
+acyclic 11 11,<br />
+...<br />
+acyclic 11 16,<br />
+acyclic 11 40,<br />
+acyclic 11 41,<br />
+...<br />
+acyclic 11 55,<br />
+acyclic 11 17 1,<br />
+acyclic 11 17 2,<br />
+acyclic 11 18 1,<br />
+acyclic 11 18 2,<br />
+acyclic 11 18 3,<br />
+acyclic 11 18 4,<br />
+acyclic 11 19 1,<br />
+...<br />
+acyclic 11 19 8,<br />
+acyclic 11 20 1,<br />
+...<br />
+acyclic 11 39 2,<br />
+...<br />
 The complete detailed list to execute can be found in [acyclic_run_par.dat](acyclic_run_par.dat).
 
 The suggestion is to run in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required.
