@@ -15,20 +15,16 @@ To facilitate the work we have divided the graphs into subsets by vertices and e
 
 Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format _g6. The number of vertices is known because we know which file the graph comes from.
 
-Compiling and running the program Split.cpp the file structure contained in the cg folder will be generated  containing the graphs in _g6 format, also the files #cgV.dat and #cgVE.dat containing cardinalities.
-Note: In the code should include the operating system of your choice:
-0 by linux
-1 by MsDos/Windows.
+Compiling and running the program [split.cpp](split.cpp) the file structure contained in the cg folder will be generated containing the graphs in _g6 format, also the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
 
-The execution could take one to two hours.
+**Note**: In the code should include the operating system of your choice: 0 for GNU/Linux or 1 for Microsoft Windows.
 
-By the way, the working folder is where the cg folder is located.
-From now on, all graphs are stored in _g6 format.
+The working folder is where the cg folder is located. From now on, all graphs are stored in _g6 format.
 
-## Aciclic graphs (simplicial point at view).
-We have generated an adaptation of the Ripser.cpp program to obtain acyclic graphs.
+## Acyclic graphs (simplicial point at view).
+We have generated an adaptation of the [Ripser](https://github.com/Ripser/ripser) program to obtain acyclic graphs.
 
-Compiling and running the program Th.cpp a structure will be generated with the ag folder containing acyclic graphs from the simplicial point at view or, in other words, graphs with trivial homology.
+Compiling and running the program [acyclic.cpp](./acyclic.cpp) a structure will be generated with the ag folder containing acyclic graphs from the simplicial point at view or, in other words, graphs with trivial homology.
 
 For the execution of Th.cpp the Flag.dat file is required
 contains a 0, this indicates that the ag file structure has not been created yet, its content are going to change to 1 with the first execution of Th automatically.
