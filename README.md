@@ -5,7 +5,7 @@ In this repository is shown how to implement the algorithms used in the article 
 This work considers simple connected graphs up to 11 vertices.
 
 ## Connected graphs
-The connected graphs were taken from the well-known repository of professor Brendan McKay (avalilable online at https://users.cecs.anu.edu.au/~bdm/data/graphs.html). The files of connected graphs are splited by its numeber of vertices: `graph2c.g6`, `graph3c.g6`, ..., `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
+The connected graphs were taken from the well-known repository of professor Brendan McKay (avalilable online at https://users.cecs.anu.edu.au/~bdm/data/graphs.html). The files of connected graphs are splited by its numeber of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
 
 **Remark**: The file `graph11.g6` contains connected and disconnected graphs, the other ones consists of only connected graphs.
 
