@@ -1,5 +1,7 @@
 # Minimal graphs for contractible and dismantlable properties
-In this repository is shown how implement the algorithms used in the article Minimal Gaphs for contracible and dismatable properties (arXiv:2109.06729 [math.CO]).
+In this repository is shown how to implement the algorithms used in the article *Minimal graphs for contractible and dismantlable properties*
+ ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
+
 This work considers simple connected graphs up to 11 vertices.
 
 ## Connected graphs
@@ -11,15 +13,15 @@ For more details about the g6 format (among other aspects) consult: https://user
 
 ## Setup files 
 To facilitate the work we have divided the graphs into subsets by vertices and edges. Even so, there are files with more than a million graphs. For files with graphs of 11 vertices with more than a million graphs, we have created a folder that contains several files of at most a million graphs. The first of these files are
-11v17e-001 and 11v17e-002.
+`11v17e-001` and `11v17e-002`.
 
-Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format _g6. The number of vertices is known because we know which file the graph comes from.
+Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format \_g6. The number of vertices is known because we know which file the graph comes from.
 
-Compiling and running the program [split.cpp](split.cpp) the file structure contained in the cg folder will be generated containing the graphs in _g6 format, also the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
+Compiling and running the program [split.cpp](split.cpp) the file structure contained in the `cg` folder will be generated containing the graphs in \_g6 format, also the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
 
 **Note**: In the code should include the operating system of your choice: 0 for GNU/Linux or 1 for Microsoft Windows.
 
-The working folder is where the cg folder is located. From now on, all graphs are stored in _g6 format.
+The working folder is where the `cg` folder is located. From now on, all graphs are stored in \_g6 format.
 
 ## Acyclic graphs
 We have generated an adaptation of the [Ripser](https://github.com/Ripser/ripser) program to obtain acyclic graphs.
