@@ -6,15 +6,15 @@
 
   Uses: 
   
-     TH                          : V and E will entered after
-     TH V                        : graphs with V vertices and E=V-1,V,V+1,..., V(V-1)/2 will be proceced
-     TH V E                      : graphs with V vertices and E edges wil be proceced 
-     TH V E n1                      : graphs with V vertices, E edges and n1_th million  wil be proceced,                    (by big files) 
-     TH V E n1 n2                  : graphs with V vertices, E edges and n1_th to n1_th () millions  wil be proceced 
+     acyclic				: V and E will entered after
+     acyclic V				: graphs with V vertices and E=V-1,V,V+1,..., V(V-1)/2 will be proceced
+     acyclic V E			: graphs with V vertices and E edges wil be proceced 
+     acyclic V E n1			: graphs with V vertices, E edges and n1_th million  wil be proceced (by big files) 
+     acyclic V E n1 n2			: graphs with V vertices, E edges and n1_th to n1_th () millions  wil be proceced 
 
 */
 
-//   CHOOSE an operative sistem     0 for   linux          1 for msdos/windows    
+//   CHOOSE an operative sistem     0 for   GNU/Linux, 1 for Microsoft Windows.
 #define OS 1
 
 
