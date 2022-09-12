@@ -94,6 +94,6 @@ The run takes a few minutes.
 ## Ivashchenko's axiom.
 The program V_IA.cpp examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in V_IA.dat
 
-## Aciclic graphs but not 0-dismatables
+## Aciclic graphs but not 0-dismantables
 Compiling an running de program ag_Not0Dis.cpp , the 7 graphs are in ag_Not0Dis.dat
 
