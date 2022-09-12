@@ -33,10 +33,10 @@ For the execution of acyclic.cpp the `Flag.dat` file is required, which contains
 Simultaneous executions of acyclic.cpp can be performed. Choosing the operating system will also be necessary.
 
 This is part of the suggested list to run:<br />
-acyclic1,<br />
-acyclic2,<br />
+acyclic 1,<br />
+acyclic 2,<br />
 ... <br />
-acyclic10,<br />
+acyclic 10,<br />
 acyclic 11 10,<br />
 acyclic 11 11,<br />
 ...<br />
@@ -62,7 +62,7 @@ The complete detailed list to execute can be found in [acyclic_run_par.dat](acyc
 
 The suggestion is to run in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required.
 
-At the end of the complete list of executions, the [GetCard_ag.cpp](GetCard_ag.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs and the files `#adV.dat` and `#agVE.dat` will be generated. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
+At the end of the complete list of executions, the [GetCard_ag.cpp](GetCard_ag.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs and the files `#agV.dat` and `#agVE.dat` will be generated. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
 ## Strong-I-Contractible but Not Strong-I-Contractible by vertices graphs
 
