@@ -1319,7 +1319,7 @@ void GetNameOut_C(int v, int e,int M,char NameOutM[30]){
 	sprintf(Num,"%d",v);strcat(NameOutM,Num);strcat(NameOutM,"v"); 
 	sprintf(Num,"%d",e);strcat(NameOutM,Num);strcat(NameOutM,"e/#");
 	sprintf(Num,"%d",v);strcat(NameOutM,Num);strcat(NameOutM,"v"); 
-	sprintf(Num,"%d",e);strcat(NameOutM,Num);
+	sprintf(Num,"%d",e);strcat(NameOutM,Num);strcat(NameOutM,"e"); 
 	if(M<10) strcat(NameOutM,"-00"); 
 	if(M>=10 && M<100) strcat(NameOutM,"-0");
 	if(M>=100) strcat(NameOutM,"-"); 
