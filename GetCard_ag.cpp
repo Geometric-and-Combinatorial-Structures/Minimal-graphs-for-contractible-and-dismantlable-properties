@@ -1,5 +1,5 @@
 /*
-Este programa es para colecxtar cardiinalidades de graficas aciclicas
+This program is to collect cardinaties of acyclic graphs
 */
 
 
