@@ -62,7 +62,7 @@ The complete detailed list to execute can be found in [acyclic_run_par.dat](acyc
 
 The suggestion is to run in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required.
 
-At the end of the complete list of executions, the [GetCard_ag.cpp](GetCard_ag.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs and the files `#agV.dat` and `#agVE.dat` will be generated. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
+At the end of the complete list of executions, the [Get#ag_n_Check_ag.cpp](Get#ag_n_Check_ag.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs and the files `#agV.dat` and `#agVE.dat` will be generated, if any file is missing due to executing a cyclic program, it will be informed. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
 ## Strong-I-Contractible but Not Strong-I-Contractible by vertices graphs
 
