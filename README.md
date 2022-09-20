@@ -76,3 +76,5 @@ The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides a
 ## Acyclic graphs but not 0-dismantables
 Compiling and running de program [ag_Not0Dis.cpp](ag_Not0Dis.cpp), the 7 graphs are in [ag_Not0Dis.dat](ag_Not0Dis.dat).
 
+## Contact
+For more information or issues about the code, please email to hector.hernandez@unison.mx or jesusfrancisco.espinoza@unison.mx.
