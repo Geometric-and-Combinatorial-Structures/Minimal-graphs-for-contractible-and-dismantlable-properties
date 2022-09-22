@@ -72,7 +72,7 @@ From the collection of acyclic graphs we obtain the graphs that are SIC but not 
 
 The run takes a few minutes.
 
-## Ivashchenko's axiom.
+## Ivashchenko's axiom
 The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in [V_IA.dat](V_IA.dat).
 
 ## Acyclic graphs that are not 0-dismantable
