@@ -66,7 +66,7 @@ We suggest running these commands in parallel with a computer using GNU/Linux op
 
 At the end of the complete list of executions, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after executing one of the `acyclic` programs, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) will inform the user. It took two weeks to run this program on our laptops. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
-## Strong-I-Contractible but Not Strong-I-Contractible by vertices graphs
+## Graphs that are Strong I-Contractible but not Strong Vertex I-Contractible
 
 From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [SpecialG.dat](SpecialG.dat).
 
