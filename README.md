@@ -5,11 +5,11 @@ In this repository we show how to implement the algorithms used in the article *
 This work considers simple connected graphs on up to 11 vertices.
 
 ## Connected graphs
-The connected graphs were taken from the well-known repository of Professor Brendan McKay (avalilable online at https://users.cecs.anu.edu.au/~bdm/data/graphs.html). There the graphs are organized into files according to the number of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
+The connected graphs were taken from the well-known repository of Professor Brendan McKay (available online at [Graphs](https://users.cecs.anu.edu.au/~bdm/data/graphs.html)). There the graphs are organized into files according to the number of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
 
 **Remark**: The file `graph11.g6` contains connected and disconnected graphs, the other ones consist only of connected graphs.
 
-For more details about the g6 format (among other aspects) consult: https://users.cecs.anu.edu.au/~bdm/data/formats.html
+For more details about the g6 format (among other aspects) consult: [graph formats](https://users.cecs.anu.edu.au/~bdm/data/formats.html).
 
 ## Setup files 
 To facilitate the work we have further divided the files according to how many edges the graphs have. For files with graphs of 11 vertices with more than one million graphs, we have created a folder that contains several files of at most one million graphs. The first of these files are
@@ -30,9 +30,9 @@ We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser)
 Compiling and running the program [acyclic.cpp](./acyclic.cpp) a structure will be generated in the `ag` folder containing all acyclic graphs on the specicied number of vertices (and edges, if desired).
 
 
-For the execution of acyclic.cpp the `Flag.dat` file is required, which contains a 0 to indicate that the file structure of `ag` has not been created yet. Its value will change to 1 with the first execution of the acyclic.cpp program.
+For the execution of `acyclic.cpp` the `Flag.dat` file is required, which contains a 0 to indicate that the file structure of `ag` has not been created yet. Its value will change to 1 with the first execution of the `acyclic.cpp` program.
 
-Simultaneous executions of acyclic.cpp can be performed. Choosing the operating system will also be necessary.
+Simultaneous executions of `acyclic.cpp` can be performed. Choosing the operating system will also be necessary.
 
 This is part of the suggested list to run:<br />
 acyclic 1<br />
@@ -64,7 +64,7 @@ The complete detailed list to execute can be found in [acyclic_run_par.dat](acyc
 
 We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required.
 
-At the end of the complete list of executions, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after executing one of the `acyclic` programs, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) will inform the user. It took two weeks to run this program on our laptops. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
+At the end of the complete list of executions, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `Get#ag_n_Check.cpp` will inform the user. It took two weeks to run this program on our laptops. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
 ## Graphs that are Strong I-Contractible but not Strong Vertex I-Contractible
 
@@ -83,7 +83,6 @@ We obtain these graphs by compiling and running the program [ag_Not0Dis.cpp](ag_
 
 ![Figure 5.](./images/Fig-5.PNG "Figure 5.")
 **Figure 5.**
-
 
 ## Contact
 For more information or issues regarding the code, please email hector.hernandez@unison.mx or jesusfrancisco.espinoza@unison.mx.
