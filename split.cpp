@@ -18,6 +18,11 @@ During the process files and directories will be relocated
 
 */
 
+//   CHOOSE an operative sistem     0 for   linux          1 for msdos/windows    
+#define OS 1
+
+  
+
 #define MaxV 11
 void Back(void){  
   int i; for(i=1;i<=11;i++) printf("%c",8);// Move 10 places left
@@ -43,13 +48,13 @@ void GetNameIn(int v, char NameIn[30]){
 
 void GetNameOut(int v, int e,char NameOut[30]){
   char Num[30];
-  strcpy(NameOut,"cg");
+  strcpy(NameOut,"");
   sprintf(Num,"%d",v);strcat(NameOut,Num);strcat(NameOut,"v"); 
   sprintf(Num,"%d",e);strcat(NameOut,Num);strcat(NameOut,"e._g6");
 }
 void GetNameOutM(int v, int e,int M,char NameOutM[30]){
   char Num[30];
-  strcpy(NameOutM,"cg");
+  strcpy(NameOutM,"");
   sprintf(Num,"%d",v);strcat(NameOutM,Num);strcat(NameOutM,"v"); 
   sprintf(Num,"%d",e);strcat(NameOutM,Num);strcat(NameOutM,"e");
   if(M<10) strcat(NameOutM,"-00"); 
@@ -60,38 +65,46 @@ void GetNameOutM(int v, int e,int M,char NameOutM[30]){
 
 void MakeDirV(int v){// Create directory of V vertex
 	char Num[30],Comm1[50];
-	strcpy(Comm1,"md cg"); // MSDOS
+	if(OS==0) strcpy(Comm1,"mkdir "); // linux
+	else strcpy(Comm1,"md "); // msdos
     sprintf(Num,"%d",v);strcat(Comm1,Num);strcat(Comm1,"v"); 
     system(Comm1);     
 }
 void MakeDirVE(int v, int e){ // Create directory of V vertex and E edges
 	char Num[30],Comm1[50];
-	strcpy(Comm1,"md cg"); // MSDOS
+	if(OS==0)strcpy(Comm1,"mkdir "); // linux
+	else strcpy(Comm1,"md "); // msdos
     sprintf(Num,"%d",v);strcat(Comm1,Num);strcat(Comm1,"v"); 
     sprintf(Num,"%d",e);strcat(Comm1,Num);strcat(Comm1,"e");
     system(Comm1);     
 }
 void MoveToDir(int v){ // Move files of V vertices and any edges to correspondent directory
 	char Num[30],Comm1[50],Name[30],NameT[30];
-	strcpy(Name," cg");sprintf(Num,"%d",v);strcat(Name,Num);strcat(Name,"v");  strcpy(NameT,Name);
+	strcpy(Name," ");sprintf(Num,"%d",v);strcat(Name,Num);strcat(Name,"v");  strcpy(NameT,Name);
 	strcat(Name,"*._g6 ");
-	strcpy(Comm1,"move "); 	strcat(Comm1,Name); strcat(Comm1,NameT); system(Comm1); // Move Files
+	if(OS==0)strcpy(Comm1,"mv "); // linux
+	else strcpy(Comm1,"move ");   // msdos
+		strcat(Comm1,Name); strcat(Comm1,NameT); system(Comm1); // Move Files
 }
 void CopyFile(int v, int e,char NameOut[30],char NameOutM[30]){// Copy Big and fractions files
 	char Num[30],Comm[50], Name[30];
-	strcpy(Comm,"ren "); // MSDOS
+	if(OS==0)strcpy(Comm,"mv "); // linux
+	else strcpy(Comm,"ren "); // msdos
 	strcat(Comm,NameOut); strcat(Comm," "); strcat(Comm,NameOutM); system(Comm); 
 	
-	strcpy(Comm,"move "); // MSDOS
-	strcat(Comm,NameOutM); strcat(Comm," cg");
+	if(OS==0)strcpy(Comm,"mv "); // linux
+	else strcpy(Comm,"move "); // msdos
+	strcat(Comm,NameOutM); strcat(Comm," ");
     sprintf(Num,"%d",v);strcat(Comm,Num);strcat(Comm,"v"); 
     sprintf(Num,"%d",e);strcat(Comm,Num);strcat(Comm,"e"); system(Comm);
 }
 void MoveDirToDir(int v, int e){// Relocate diredctories
 	char Num[30],Comm1[50],Name[30],NameT[30];
-	strcpy(NameT," cg");sprintf(Num,"%d",v);strcat(NameT,Num);strcat(NameT,"v"); strcpy(Name,NameT);
+	strcpy(NameT," ");sprintf(Num,"%d",v);strcat(NameT,Num);strcat(NameT,"v"); strcpy(Name,NameT);
 	sprintf(Num,"%d",e);strcat(Name,Num);strcat(Name,"e ");
-	strcpy(Comm1,"move "); strcat(Comm1, Name); strcat(Comm1, NameT); system(Comm1); 
+	if(OS==0) strcpy(Comm1,"mv "); // linux
+	else strcpy(Comm1,"move ");    // msdos
+	 strcat(Comm1, Name); strcat(Comm1, NameT); system(Comm1); 
 }
 
 void GetA_M(int Binary[64][6],char Num[12],int G[MaxV][MaxV],int V){
@@ -152,7 +165,7 @@ void PrintGtoD(int k,int G[MaxV][MaxV],int V){
   } printf("\n");
 }
 
-main(){
+int main(){
    int Binary[64][6],Qones[64];
    int i,j,k,V,E,Nones;
    long int countV[MaxV+1],countVE[MaxV+1][MaxV*(MaxV-1)/2 +1],Tg=0;
@@ -168,9 +181,14 @@ main(){
    
    GetNameOut(1,0,NameOut);OF=fopen(NameOut,"w");fclose(OF);// V=1
    //MakeDirV(1);MoveToDir(1);
-   system("md cg1v");system("move cg1v0e._g6 cg1v");
-   OFc=fopen("CardVE.dat","w"); 
-   OFcV=fopen("CardV.dat","w"); 
+   if(OS==0){
+   	   system("mkdir 1v");system("mv 1v0e._g6 1v");
+     }else{
+   	   system("md 1v");system("move 1v0e._g6 1v");
+   }
+   
+   OFc=fopen("#cgVE.dat","w"); 
+   OFcV=fopen("#cgV.dat","w"); 
    for(V=1;V<=11;V++){
       for(E=V-1;E<=V*(V-1)/2;E++) countVE[V][E]=0;countV[V]=0; 
    }
@@ -268,9 +286,39 @@ main(){
    fclose(OFcV);
    
 
+   if(OS==0){
+   	      system("mkdir cg");
+   	      system("mv 1v cg");
+   	      system("mv 2v cg");
+   	      system("mv 3v cg");
+   	      system("mv 4v cg");
+   	      system("mv 5v cg");
+   	      system("mv 6v cg");
+   	      system("mv 7v cg");
+   	      system("mv 8v cg");
+   	      system("mv 9v cg");
+   	      system("mv 10v cg");
+   	      system("mv 11v cg");
+      }else{
+      	  system("md cg"); 
+   	   	  system("move 1v cg");
+   	      system("move 2v cg");
+   	      system("move 3v cg");
+   	      system("move 4v cg");
+   	      system("move 5v cg");
+   	      system("move 6v cg");
+   	      system("move 7v cg");
+   	      system("move 8v cg");
+   	      system("move 9v cg");
+   	      system("move 10v cg");
+   	      system("move 11v cg");
+   }
+
    End=clock();time_spent = (double)(End - Begin) / CLOCKS_PER_SEC;
    printf("\nExecution time %lf\n", time_spent);
    printf("\n%0.0lf graphs processed per second",Tg/time_spent);getchar();
    
    return 0;
 }
+
+
