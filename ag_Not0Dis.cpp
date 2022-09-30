@@ -9,7 +9,7 @@ and say which one are 1 diamatables but no 0 dismantable
 #include<math.h>
 
 //Maximun number of vertices 
-#define MaxV 8
+#define MaxV 11
 
 FILE *IF,*OF,*IFc;
 
@@ -146,7 +146,7 @@ void PrintGtoF(int k,int G[MaxV][MaxV],int V){
 }
 
 int main(){
-	char NameIn[20],Num[12];
+	char NameIn[30],Num[12];
 	int G[MaxV][MaxV],Lk[MaxV][MaxV];
     
     int V,E;
