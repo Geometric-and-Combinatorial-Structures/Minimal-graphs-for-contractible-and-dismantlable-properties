@@ -105,7 +105,8 @@ int BtoSICv(int G[MaxV][MaxV],int n){
 			CalLk(G,n,i,Lk,&m);
 			if(BtoSICv(Lk,m)==1){
 			  	  DeleteVert(G,n,i,GmV,&m);
-			  	  return BtoSICv(GmV,m);
+			  	  return BtoSICv(GmV,m); // For express version (n<12)
+				  //if(BtoSICv(GmV,m)==1) return 1; // Full version
 		}	}	
 	    return 0;
 }	}	
@@ -127,9 +128,7 @@ void CalLk( int A[MaxV][MaxV],  int n, int k1,int k2,
 void DeleteEdge(int A[MaxV][MaxV],  int n, int k1,int k2,int B[MaxV][MaxV]){
 	int i,j;	
 	for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-            B[i][j]=A[i][j];		
-		}
+	   for(j=0;j<n;j++) B[i][j]=A[i][j];
 	}    
 	B[k1][k2]=0;B[k2][k1]=0;
 }
@@ -144,7 +143,8 @@ int BtoSIC( int G[MaxV][MaxV],int n){ // Belongs to Strong I-contractible set
 			CalLk(G,n,i,Lk,&m);
 			if(BtoSIC(Lk,m)==1){
 			  	  DeleteVert(G,n,i,GmV,&m);
-			  	  return BtoSIC(GmV,m);
+			  	  return BtoSIC(GmV,m);          // Express version for n<12
+				  //if(BtoSIC(GmV,m)==1) return 1; // Full version 
 		}	}	
 		//Try to delete edges
 		for(i=0;i<n-1 ;i++){
@@ -152,8 +152,9 @@ int BtoSIC( int G[MaxV][MaxV],int n){ // Belongs to Strong I-contractible set
 				if(G[i][j]==1){
 					CalLk(G,n,i,j,Lk,&m); //Calcuate neighborhood of v_i   \cap v_j
 					if(BtoSIC(Lk,m)==1){
-						DeleteEdge(G,n,i,j,GmE);			
-						return BtoSIC(GmE,n);
+						DeleteEdge(G,n,i,j,GmE); 			
+						return BtoSIC(GmE,n); // Express version
+						//if(BtoSIC(GmE,n)==1) return 1; // Full version 
 		}   }   }	}
 		return 0;
 	}
