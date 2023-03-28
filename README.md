@@ -71,7 +71,7 @@ At the end of the complete list of executions, the [Get#ag_n_Check.cpp](Get#ag_n
 From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [SpecialG.dat](SpecialG.dat). Such graphs are depicted in Figure 1 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
 ![Figure 1.](./images/Fig-1.PNG "Figure 1.")
-**Figure 1.**
+**Figure 1.** Minimal examples of graphs that are in SIC but not in SVIC.
 
 The run takes a few minutes. 
 
@@ -82,7 +82,7 @@ The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides a
 We obtain these graphs by compiling and running the program [ag_Not0Dis.cpp](ag_Not0Dis.cpp).  The resulting 7 graphs are in [ag_Not0Dis.dat](ag_Not0Dis.dat) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
 ![Figure 5.](./images/Fig-5.PNG "Figure 5.")
-**Figure 5.**
+**Figure 5.** The smallest graphs that are 1-dismantlable (and hence strong vertex I-contractible) but not 0-dismantlable.
 
 ## Contact
 For more information or issues regarding the code, please email hector.hernandez@unison.mx or jesusfrancisco.espinoza@unison.mx.
