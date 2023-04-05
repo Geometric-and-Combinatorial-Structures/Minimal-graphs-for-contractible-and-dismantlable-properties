@@ -140,9 +140,12 @@ From the collection of acyclic graphs we obtain the graphs that are SIC but not 
 ![Figure 1.](./images/Fig-1.PNG "Figure 1.")
 **Figure 1.** Minimal examples of graphs that are in SIC but not in SVIC.
 
-The run takes a few minutes.
-
-Under GNU/Linux, ...
+Under GNU/Linux the same script works well, can be downloaded from [GNU-Linux/GetSpecialG.cpp](./GNU-Linux/GetSpecialG.cpp) to compile and execute as follow:
+```
+> g++ GetSpecialG.cpp -o GetSpecialG
+> ./GetSpecialG
+```
+In [GNU-Linux/SpecialG.dat](./GNU-Linux/SpecialG.dat) are also the 12 graphs that make the difference between columns 5 and 6 in Table 1. The run takes about 30 minutes in our personal computer.
 
 ## Ivashchenko's axiom
 The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in [V_IA.dat](V_IA.dat).
