@@ -106,7 +106,7 @@ void DeleteVert(int A[MaxV][MaxV], int n, int k, int B[MaxV][MaxV], int *m){
     }
 }
 
-int BtoSICv(int G[MaxV][MaxV],int n){
+int BtoSVIC(int G[MaxV][MaxV], int n){
     int i,j,m;
     int Lk[MaxV][MaxV],GmV[MaxV][MaxV];
     if(n==0 || n==1) return n;
@@ -115,9 +115,9 @@ int BtoSICv(int G[MaxV][MaxV],int n){
         for(i=0;i<n;i++){
             //Compujte the neighborhood of the vertex v_i
             CalLk(G,n,i,Lk,&m);
-            if(BtoSICv(Lk,m)==1){
+            if(BtoSVIC(Lk,m)==1){
                 DeleteVert(G,n,i,GmV,&m);
-                return BtoSICv(GmV,m);
+                return BtoSVIC(GmV,m);
             }
         }
         return 0;
@@ -213,7 +213,7 @@ int main(){
     OF=fopen("SpecialG.dat","w");
     IFc=fopen("#agVE.dat","r");
     if(IFc==NULL){
-        printf("\nFile #agVE.dat not found. Please check.\nPress enter to continue.\n");
+        printf("\nFile #agVE.dat not found. Please check.\nPress enter to exit.\n");
         getchar();
         return 1;
     }
@@ -224,7 +224,7 @@ int main(){
             GetNameIn_ag(V,E,NameIn);
             IF=fopen(NameIn,"r");
             if(IF==NULL){
-                printf("\nProblems with input file %s.\nPress enter to continue.\n",NameIn);
+                printf("\nProblems with input file %s.\nPress enter to exit.\n",NameIn);
                 getchar();
                 return 1;
             }
@@ -232,9 +232,9 @@ int main(){
                 GetA_M(Binary,G,V); 
                 Tg++;
                 if(BtoSIC(G,V)==1){
-                    if(BtoSICv(G,V)==0){
+                    if(BtoSVIC(G,V)==0){
                         count++;
-                        printf("\nFound a graph in SIC but not in SICV.");
+                        printf("\nFound a graph in SIC but not in SVIC.\n");
                         PrintGtoF(count,G, V);
                         PrintGtoD(count,G, V);
                     }
@@ -243,7 +243,7 @@ int main(){
             fclose(IF);
         }
     }
-    if(count==0) printf("\n Did not found any special graph with V<=10.\n");
+    if(count==0) printf("\nDid not found any special graph with V<=10.\n");
     
     V=11;
     for(E=V-1;E<=16;E++){
@@ -260,9 +260,9 @@ int main(){
             GetA_M(Binary,G,V);
             Tg++;
             if(BtoSIC(G,V)==1){
-                if(BtoSICv(G,V)==0){
+                if(BtoSVIC(G,V)==0){
                     count++;
-                    printf("\nFound a graph SIC but not SICv");
+                    printf("\nFound a graph in SIC but not in SVIC.\n");
                     PrintGtoF(count,G, V);
                     PrintGtoD(count,G, V);
                 }
@@ -270,10 +270,10 @@ int main(){
         }
         fclose(IF);
     }
-    if(count==0) printf("\n Did not found any special graph with V=11 and E=10,11,..., 16\n");
+    if(count==0) printf("\n Did not found any special graph with V=11 and E=10,11,...,16.\n");
     for(E=17;E<=39;E++){
         fscanf(IFc,"%d %d %ld",&v,&e,&ng);
-        printf("\nV=%d, E=%d, ng=%ld, M=1",v,e,ng);
+        printf("\nV=%d, E=%d, ng=%ld, M=1 ",v,e,ng);
         M=1;
         GetNameIn_ag(V,E,M,NameIn);
         IF=fopen(NameIn,"r");
@@ -295,9 +295,9 @@ int main(){
                 GetA_M(Binary,G,V);
                 Tg++;
                 if(BtoSIC(G,V)==1){
-                    if(BtoSICv(G,V)==0){
+                    if(BtoSVIC(G,V)==0){
                         count++;
-                        printf("\nFound a graph in SIC but not in SICV. M=%d",M);
+                        printf("\nFound a graph in SIC but not in SVIC. M=%d",M);
                         PrintGtoF(count,G, V);
                         PrintGtoD(count,G, V);
                         printf("\n             ");
@@ -317,7 +317,7 @@ int main(){
             }
         }while(IF!=NULL && IFcM!=NULL);
     }
-    if(count>0) printf("\n %d special graphs were founded",count);
+    if(count>0) printf("\n%d special graphs were found.",count);
     for(E=40;E<=V*(V-1)/2;E++){
         fscanf(IFc,"%d %d %ld",&v,&e,&g);
         printf("\nV=%d E=%d ng=%ld",v,e,g);
@@ -332,9 +332,9 @@ int main(){
             GetA_M(Binary,G,V);
             Tg++;
             if(BtoSIC(G,V)==1){
-                if(BtoSICv(G,V)==0){
+                if(BtoSVIC(G,V)==0){
                     count++;
-                    printf("\nFound a graph in SIC but not in SICV.");
+                    printf("\nFound a graph in SIC but not in SVIC.");
                     PrintGtoF(count,G, V);
                     PrintGtoD(count,G, V);
                 }
@@ -347,7 +347,7 @@ int main(){
     End=clock();
     time_spent = (double)(End - Begin) / CLOCKS_PER_SEC;
     printf("\nExecution time: %lf seconds.\n", time_spent);
-    printf("\n%0.0lf graphs processed per second.\n Press enter to exit.\n",Tg/time_spent);
+    printf("\n%0.0lf graphs processed per second.\nPress enter to exit.\n",Tg/time_spent);
     getchar();
     return 0;
 }
