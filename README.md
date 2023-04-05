@@ -126,19 +126,16 @@ Independently of the computation of the family of acyclic graphs, can be perform
 ```
 Same list as for the acyclic ones. Of course, simultaneous executions of `Sic.cpp` can be performed under Windows by opening several instances. Under GNU/Linux can be run the bash script [GNU-Linux/Sic_runner](./GNU-Linux/Sic_runner), to send all the processes to the background and use all the available cores of the computer. In our personal computer such bash script takes about 40 minutes to be completed, no more than 4 GiB of RAM, and the output consists of 2338 files distributed in 34 sub-folders in `sic`, with a total size of 1.7 GiB.
 
-After the above computation, can be compiled and executed the script [Windows/SIC_cardinalities.cpp](./Windows/SIC_cardinalities.cpp), or [GNU-Linux/SIC_cardinalities.cpp](./GNU-Linux/SIC_cardinalities.cpp) if corresponds, to collect the cardinality of the strong I-contractible graphs, partitionated by number or vertices. 
+After the above computation, can be compiled and executed the script [Windows/Sic_cardinalities.cpp](./Windows/Sic_cardinalities.cpp), or [GNU-Linux/Sic_cardinalities.cpp](./GNU-Linux/Sic_cardinalities.cpp) if corresponds, to collect the cardinality of the strong I-contractible graphs, partitionated by number or vertices. 
 ```
-> g++ SIC_cardinalities.cpp -o SIC_cardinalities
-> ./SIC_cardinalities
+> g++ Sic_cardinalities.cpp -o Sic_cardinalities
+> ./Sic_cardinalities
 ```
-The cardinalities obtained in the file `#sicV.dat` corresponds the the numbers in the 5-th column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)). On the other hand, as every strong I-contractible graph is I-contractible, therefore acyclic, and the number of acyclic and strong I-contractible graphs coincide for every number of vertices (up to 11), then the fourth columns (related to the I-contractible graphs) must be coincide with those.
-
-As was proved in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/pdf/1808.07461.pdf), every strong I-contractible graph es collapsible, then acyclic, 
-
+The cardinalities obtained in the file `#sicV.dat` corresponds to the numbers in the 5th column in Table 1. On the other hand, as every strong I-contractible graph is I-contractible, therefore acyclic, and the number of acyclic and strong I-contractible graphs coincide for every number of vertices (up to 11), then the fourth column (related to the I-contractible graphs) must be coincide with those.
 
 ## Graphs that are Strong I-Contractible but not Strong Vertex I-Contractible
 
-From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [SpecialG.dat](SpecialG.dat). Such graphs are depicted in Figure 1 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
+From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [Windows/GetSpecialG.cpp](./Windows/GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [Windows/SpecialG.dat](./Windows/SpecialG.dat). Such graphs are depicted in Figure 1 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
 ![Figure 1.](./images/Fig-1.PNG "Figure 1.")
 **Figure 1.** Minimal examples of graphs that are in SIC but not in SVIC.
