@@ -82,10 +82,10 @@ acyclic 11 39 2<br />
 ...<br />
 The complete detailed list to execute, under Windows, can be found in [Windows/acyclic_run_par.dat](./Windows/acyclic_run_par.dat). We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
-At the end of the complete list of executions, the [Windows/Get#ag_n_Check.cpp](./Windows/Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `Get#ag_n_Check.cpp` will inform the user. Under GNU/Linux, the same script ([GNU-Linux/Get#ag_n_Check.cpp](./GNU-Linux/Get#ag_n_Check.cpp)) works well:
+At the end of the complete list of executions, the [Windows/acyclic_cardinalities.cpp](./Windows/acyclic_cardinalities.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `acyclic_cardinalities.cpp` will inform the user. Under GNU/Linux, the same script ([GNU-Linux/acyclic_cardinalities.cpp](./GNU-Linux/acyclic_cardinalities.cpp)) works well:
 ```
-> g++ Get#ag_n_Check.cpp -o Get#ag_n_Check
-> ./Get#ag_n_Check
+> g++ acyclic_cardinalities.cpp -o acyclic_cardinalities
+> ./acyclic_cardinalities
 ```
 The output of such script is written in the third column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties*
  ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
