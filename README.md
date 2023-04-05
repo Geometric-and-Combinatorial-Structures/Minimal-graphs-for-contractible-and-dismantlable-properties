@@ -162,7 +162,7 @@ We obtain these graphs by compiling and running the program [Windows/1dismtbl-0d
 > ./1dismtbl-0dismtbl
 ```
 
-The resulting 7 graphs are in the outpu file `1dismtbl-0dismtbl.dat` (available here [Windows/1dismtbl-0dismtbl.dat](./Windows/1dismtbl-0dismtbl.dat) and here [GNU-Linux/1dismtbl-0dismtbl.dat](./GNU-Linux/1dismtbl-0dismtbl.dat)) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
+The resulting 7 graphs are in the output file `1dismtbl-0dismtbl.dat` (available here [Windows/1dismtbl-0dismtbl.dat](./Windows/1dismtbl-0dismtbl.dat) and here [GNU-Linux/1dismtbl-0dismtbl.dat](./GNU-Linux/1dismtbl-0dismtbl.dat)) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
 ![Figure 5.](./images/Fig-5.PNG "Figure 5.")
 **Figure 5.** The smallest graphs that are 1-dismantlable (and hence strong vertex I-contractible) but not 0-dismantlable.
