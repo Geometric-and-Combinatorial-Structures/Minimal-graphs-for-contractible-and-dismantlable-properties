@@ -55,7 +55,7 @@ Simultaneous executions of `acyclic.cpp` can be performed under Windows by openi
 > chmod a+x acyclic_runner
 > ./acyclic_runner
 ```
-In our personal computer this script takes about 4 days to be completed, no more than 8 GiB of RAM, and the output consists of 2338 files distributed in 34 sub-folders in `ag`, with a total size of 1.7 GiB.
+In our personal computer this script takes about 4 days to be completed, no more than 8 GiB of RAM is needed and the output consists of 2338 files distributed in 34 sub-folders in `ag`, with a total size of 1.7 GiB.
 
 Of course, in Windows as well as in GNU/Linux, the script `acyclic` can be executed manually as follows:<br />
 acyclic 1<br />
@@ -92,7 +92,7 @@ At the end of the complete list of executions, the [Windows/acyclic_cardinalitie
 > g++ acyclic_cardinalities.cpp -o acyclic_cardinalities
 > ./acyclic_cardinalities
 ```
-The output of such script is written in the third column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
+The output of such script is written in the third column in Table 1.
 
 ## The family of Strong I-Contractible graphs
 Independently of the computation of the family of acyclic graphs, can be performed the computation of the family of Strong I-Contractible graphs. For this, can be compiled and executed the script [Windows/Sic.cpp](./Windows/Sic.cpp) under Windows; or [GNU-Linux/Sic.cpp](./GNU-Linux/Sic.cpp) under GNU/Linux:
