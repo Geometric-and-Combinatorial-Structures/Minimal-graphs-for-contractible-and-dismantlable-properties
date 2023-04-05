@@ -17,7 +17,7 @@ To facilitate the work we have further divided the files according to how many e
 
 Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format \_g6. The number of vertices is known based on which file the graph comes from.
 
-Compiling and running the program [Windows/split.cpp](./Windows/split.cpp), the file structure contained in the `cg` folder will be generated containing the graphs in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
+Compiling and running the program [Windows/split.cpp](./Windows/split.cpp), the file structure contained in the `cg` folder will be generated containing the connected graphs up to 11 vertices in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities. The output of such script is written in the second column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
 
 Under GNU/Linux can be used the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be compiled and executed in the terminal as:
 ```
@@ -80,16 +80,50 @@ acyclic 11 20 1<br />
 ...<br />
 acyclic 11 39 2<br />
 ...<br />
-The complete detailed list to execute, under Windows, can be found in [Windows/acyclic_run_par.dat](./Windows/acyclic_run_par.dat). We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
+The complete detailed list to execute, under Windows, can be found in [Windows/acyclic_run_parallel.dat](./Windows/acyclic_run_parallel.dat). We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
 At the end of the complete list of executions, the [Windows/acyclic_cardinalities.cpp](./Windows/acyclic_cardinalities.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `acyclic_cardinalities.cpp` will inform the user. Under GNU/Linux, the same script ([GNU-Linux/acyclic_cardinalities.cpp](./GNU-Linux/acyclic_cardinalities.cpp)) works well:
 ```
 > g++ acyclic_cardinalities.cpp -o acyclic_cardinalities
 > ./acyclic_cardinalities
 ```
-The output of such script is written in the third column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties*
- ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
- 
+The output of such script is written in the third column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
+
+## The family of Stron I-Contractible graphs
+Independently of the computation of the family of acyclic graphs, can be performed the computation of the family of Strong I-Contractible graphs. For this, can be compiled and executed the script [Windows/Sic.cpp](./Windows/Sic.cpp) under Windows; or, under GNU/Linux ([GNU-Linux/Sic.cpp](./GNU-Linux/Sic.cpp)):
+```
+> g++ Sic.cpp -o Sic
+> ./Sic 1
+> ./Sic 2
+...
+```
+<br />
+acyclic 1<br />
+acyclic 2<br />
+... <br />
+acyclic 10<br />
+acyclic 11 10<br />
+acyclic 11 11<br />
+...<br />
+acyclic 11 16<br />
+acyclic 11 40<br />
+acyclic 11 41<br />
+...<br />
+acyclic 11 55<br />
+acyclic 11 17 1<br />
+acyclic 11 17 2<br />
+acyclic 11 18 1<br />
+acyclic 11 18 2<br />
+acyclic 11 18 3<br />
+acyclic 11 18 4<br />
+acyclic 11 19 1<br />
+...<br />
+acyclic 11 19 8<br />
+acyclic 11 20 1<br />
+...<br />
+acyclic 11 39 2<br />
+...<br />
+Simultaneous executions of `acyclic.cpp` can be performed in Windows by opening several instances. Under GNU/Linux can be run the bash script [GNU-Linux/acyclic_runner](./GNU-Linux/acyclic_runner), to send all the processes to the background and use all the available cores in the computer. 
 ## Graphs that are Strong I-Contractible but not Strong Vertex I-Contractible
 
 From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [SpecialG.dat](SpecialG.dat). Such graphs are depicted in Figure 1 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
@@ -97,7 +131,9 @@ From the collection of acyclic graphs we obtain the graphs that are SIC but not 
 ![Figure 1.](./images/Fig-1.PNG "Figure 1.")
 **Figure 1.** Minimal examples of graphs that are in SIC but not in SVIC.
 
-The run takes a few minutes. 
+The run takes a few minutes.
+
+Under GNU/Linux, ...
 
 ## Ivashchenko's axiom
 The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in [V_IA.dat](V_IA.dat).
