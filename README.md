@@ -124,7 +124,7 @@ Independently of the computation of the family of acyclic graphs, can be perform
 ...
 > ./Sic 11 55
 ```
-Same list as for the acyclic ones. Of course, simultaneous executions of `Sic.cpp` can be performed under Windows by opening several instances. Under GNU/Linux can be run the bash script [GNU-Linux/Sic_runner](./GNU-Linux/Sic_runner), to send all the processes to the background and use all the available cores of the computer. In our personal computer such bash script takes about 40 minutes to be completed, no more than 4 GiB of RAM, and the output consists of 2338 files distributed in 34 sub-folders in `sic`, with a total size of 1.7 GiB.
+Same list as for the acyclic ones. Of course, simultaneous executions of `Sic.cpp` can be performed under Windows by opening several instances. Under GNU/Linux can be run the bash script [GNU-Linux/Sic_runner](./GNU-Linux/Sic_runner), to send all the processes to the background and use all the available cores of the computer. In our personal computer such bash script takes about 40 minutes to be completed, no more than 4 GiB of RAM is needed and the output consists of 2338 files distributed in 34 sub-folders in `sic`, with a total size of 1.7 GiB.
 
 After the above computation, can be compiled and executed the script [Windows/Sic_cardinalities.cpp](./Windows/Sic_cardinalities.cpp), or [GNU-Linux/Sic_cardinalities.cpp](./GNU-Linux/Sic_cardinalities.cpp) if corresponds, to collect the cardinality of the strong I-contractible graphs, partitionated by number or vertices. 
 ```
