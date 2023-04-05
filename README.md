@@ -148,7 +148,12 @@ Under GNU/Linux the same script works well, can be downloaded from [GNU-Linux/Ge
 In [GNU-Linux/SpecialG.dat](./GNU-Linux/SpecialG.dat) are also the 12 graphs that make the difference between columns 5 and 6 in Table 1. The run takes about 30 minutes in our personal computer.
 
 ## Ivashchenko's axiom
-The program [V_IA.cpp](V_IA.cpp) examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", there are in [V_IA.dat](V_IA.dat).
+The program [Windows/CheckAxiom.cpp](./Windows/CheckAxiom.cpp), as well as [GNU-Linux/CheckAxiom.cpp](./GNU-Linux/CheckAxiom.cpp), examines graphs up to 9 vertices and provides adjacency matrices for graphs that violate this "axiom", the output there is in [Windows/CheckAxiom.cpp](./Windows/CheckAxiom.cpp) ([GNU-Linux/CheckAxiom.cpp](./GNU-Linux/CheckAxiom.cpp), respectively). Compile and execute, under GNU/Linux as follows:
+```
+> g++ CheckAxiom.cpp -o CheckAxiom
+> ./CheckAxiom
+```
+The full process takes a few seconds.
 
 ## Acyclic graphs that are not 0-dismantable
 We obtain these graphs by compiling and running the program [ag_Not0Dis.cpp](ag_Not0Dis.cpp).  The resulting 7 graphs are in [ag_Not0Dis.dat](ag_Not0Dis.dat) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
