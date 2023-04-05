@@ -36,7 +36,7 @@ The working folder is where the `cg` folder is located. From now on, all graphs 
 ## Acyclic graphs
 We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser) program in order to generate acyclic graphs (that is graphs whose clique complex have trivial homology over F_2).
 
-Compiling and running the program [Windows/acyclic.cpp](./Windows/acyclic.cpp) a structure will be generated in the `ag` folder containing all acyclic graphs on the specicied number of vertices (and edges, if desired).
+Compiling and running the program [Windows/acyclic.cpp](./Windows/acyclic.cpp) a structure will be generated in the `ag` folder containing all acyclic graphs on the specified number of vertices (and edges, if desired).
 
 For the execution of `acyclic.cpp` the `FlagAcyclic.dat` file is required, which contains a 0 to indicate that the file structure of `ag` has not been created yet. Its value will change to 1 with the first execution of the `acyclic.cpp` program.
 
@@ -47,9 +47,14 @@ Under GNU/Linux can be used the script [GNU-Linux/acyclic.cpp](./GNU-Linux/acycl
 ```
 In this case, also the file `FlagAcyclic.dat` must be located in the work directory and initialized in 0; otherwise, a "Segmentation fault" message will be displayed.
 
-Simultaneous executions of `acyclic.cpp` can be performed in Windows by opening several instances. Under GNU/Linux can be runned the bash script ``
+Simultaneous executions of `acyclic.cpp` can be performed in Windows by opening several instances. Under GNU/Linux can be run the bash script [GNU-Linux/acyclic_runner](./GNU-Linux/acyclic_runner), to send all the processes to the background and use all the available cores in the computer. 
+```
+> chmod a+x acyclic_runner
+> ./acyclic_runner
+```
+In our personal computer this script takes about 4 days to be completed, no more than 8 GiB of RAM, and the output consists of 2338 files distributed in 34 sub-folders in `./ag`, with a total size of 1.7 GiB.
 
-This is part of the suggested list to run:<br />
+Of course, in Windows as well as in GNU/Linux, the script `acyclic` can be executed manually as follows:<br />
 acyclic 1<br />
 acyclic 2<br />
 ... <br />
@@ -75,12 +80,16 @@ acyclic 11 20 1<br />
 ...<br />
 acyclic 11 39 2<br />
 ...<br />
-The complete detailed list to execute can be found in [acyclic_run_par.dat](acyclic_run_par.dat).
+The complete detailed list to execute, under Windows, can be found in [Windows/acyclic_run_par.dat](./Windows/acyclic_run_par.dat). We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
 
-We suggest running these commands in parallel with a computer using GNU/Linux operating system. Otherwise a couple of weeks of computation may be required.
-
-At the end of the complete list of executions, the [Get#ag_n_Check.cpp](Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `Get#ag_n_Check.cpp` will inform the user. It took two weeks to run this program on our laptops. If so desired, the output of these runs can be downloaded from the page [Geometric and Combinatorial Structures](http://gcs.mat.uson.mx/index.php/8-research/4-acyclic-graphs).
-
+At the end of the complete list of executions, the [Windows/Get#ag_n_Check.cpp](./Windows/Get#ag_n_Check.cpp) program must be compiled and executed to collect the cardinalities of acyclic graphs, and the files `#agV.dat` and `#agVE.dat` will be generated. If any file is missing after one of the `acyclic.cpp` program executions, the execution of `Get#ag_n_Check.cpp` will inform the user. Under GNU/Linux, the same script ([GNU-Linux/Get#ag_n_Check.cpp](./GNU-Linux/Get#ag_n_Check.cpp)) works well:
+```
+> g++ Get#ag_n_Check.cpp -o Get#ag_n_Check
+> ./Get#ag_n_Check
+```
+The output of such script is written in the third column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties*
+ ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
+ 
 ## Graphs that are Strong I-Contractible but not Strong Vertex I-Contractible
 
 From the collection of acyclic graphs we obtain the graphs that are SIC but not SVIC by compiling and executing the program [GetSpecialG.cpp](GetSpecialG.cpp). From this we obtain 12 graphs, which are collected in [SpecialG.dat](SpecialG.dat). Such graphs are depicted in Figure 1 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
