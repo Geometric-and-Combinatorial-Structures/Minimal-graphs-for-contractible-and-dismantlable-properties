@@ -3,8 +3,7 @@ In this repository we show how to implement the algorithms used in the article *
  ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the cardinalities in Table 1:
  
  ![Table 1.](./images/Table-1.png "Table 1.")
-**Table 1.** ThContractible and dismantlable classes of graphs on at most 11 vertices.
-
+**Table 1.** Contractible and dismantlable classes of graphs on at most 11 vertices.
 
 This work considers simple connected graphs on up to 11 vertices.
 
