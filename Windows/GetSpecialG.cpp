@@ -1,9 +1,5 @@
 /*
-This program take graphs with trivial homology up to 11 vertices
-
-and take wich are SIC (all)
-but are not SICv
-
+This program runs over the family of acyclic graphs, up to 11 vertices, and find the graphs in SIC but not in SVIC.
 */
 
 
