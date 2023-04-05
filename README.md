@@ -17,32 +17,37 @@ To facilitate the work we have further divided the files according to how many e
 
 Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format \_g6. The number of vertices is known based on which file the graph comes from.
 
-Compiling and running the program [split.cpp](split.cpp), the file structure contained in the `cg` folder will be generated containing the graphs in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
+Compiling and running the program [Windows/split.cpp](./Windows/split.cpp), the file structure contained in the `cg` folder will be generated containing the graphs in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
 
-Under GNU/Linux can be used the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be complied and executed in the terminal as:
+Under GNU/Linux can be used the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be compiled and executed in the terminal as:
 ```
 > g++ split.cpp -o split
-> ./splitsplit 
+> ./split
 ```
 We have used the following version of the compiler:
 ```
 > g++ --version
 g++ (Debian 10.2.1-6) 10.2.1 20210110
 ```
-In a laptop with a processor Intel(R) Xeon(R) CPU E3-1535M v6 @ 3.10GHz, the execution of the script `split.cpp` takes about 25 minutes, no more than 4 GB of RAM, and the output consists of 1169 files distributed in 34 sub-folders in `./cg`, with a total size of 10.4 GiB.
+In a laptop with a processor Intel(R) Xeon(R) CPU E3-1535M v6 @ 3.10GHz, the execution of the script `split.cpp` takes about 25 minutes, no more than 4 GiB of RAM, and the output consists of 1169 files distributed in 34 sub-folders in `./cg`, with a total size of 10.4 GiB.
 
 The working folder is where the `cg` folder is located. From now on, all graphs are stored in \_g6 format.
 
 ## Acyclic graphs
-We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser) program in order to generate acyclic graphs (that is graphs whose clique complex have trivial homology over F_2)
+We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser) program in order to generate acyclic graphs (that is graphs whose clique complex have trivial homology over F_2).
 
+Compiling and running the program [Windows/acyclic.cpp](./Windows/acyclic.cpp) a structure will be generated in the `ag` folder containing all acyclic graphs on the specicied number of vertices (and edges, if desired).
 
-Compiling and running the program [acyclic.cpp](./acyclic.cpp) a structure will be generated in the `ag` folder containing all acyclic graphs on the specicied number of vertices (and edges, if desired).
+For the execution of `acyclic.cpp` the `FlagAcyclic.dat` file is required, which contains a 0 to indicate that the file structure of `ag` has not been created yet. Its value will change to 1 with the first execution of the `acyclic.cpp` program.
 
+Under GNU/Linux can be used the script [GNU-Linux/acyclic.cpp](./GNU-Linux/acyclic.cpp), which can be compiled and executed in the terminal as:
+```
+> g++ acyclic.cpp -o acyclic
+> ./acyclic
+```
+In this case, also the file `FlagAcyclic.dat` must be located in the work directory and initialized in 0; otherwise, a "Segmentation fault" message will be displayed.
 
-For the execution of `acyclic.cpp` the `Flag.dat` file is required, which contains a 0 to indicate that the file structure of `ag` has not been created yet. Its value will change to 1 with the first execution of the `acyclic.cpp` program.
-
-Simultaneous executions of `acyclic.cpp` can be performed. Choosing the operating system will also be necessary.
+Simultaneous executions of `acyclic.cpp` can be performed in Windows by opening several instances. Under GNU/Linux can be runned the bash script ``
 
 This is part of the suggested list to run:<br />
 acyclic 1<br />
