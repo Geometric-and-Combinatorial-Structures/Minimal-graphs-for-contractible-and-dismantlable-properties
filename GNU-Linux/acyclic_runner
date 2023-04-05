@@ -1,0 +1,160 @@
+#!/usr/bin/bash
+./acyclic 1
+./acyclic 2
+./acyclic 3
+./acyclic 4
+./acyclic 5
+./acyclic 6
+./acyclic 7
+./acyclic 8
+./acyclic 9 &
+./acyclic 10 &
+./acyclic 11 10 &
+./acyclic 11 11 &
+./acyclic 11 12 &
+./acyclic 11 13 &
+./acyclic 11 14 &
+./acyclic 11 15 &
+./acyclic 11 16 &
+./acyclic 11 17 1 2 &
+./acyclic 11 18 1 4 &
+./acyclic 11 19 1 8 &
+./acyclic 11 20 1 7 &
+./acyclic 11 20 8 15 &
+./acyclic 11 21 1 9 &
+./acyclic 11 21 10 17 &
+./acyclic 11 21 18 24 &
+./acyclic 11 22 1 11 &
+./acyclic 11 22 12 20 &
+./acyclic 11 22 21 29 &
+./acyclic 11 22 30 37 &
+./acyclic 11 23 1 9 &
+./acyclic 11 23 10 17 &
+./acyclic 11 23 18 25 &
+./acyclic 11 23 26 33 &
+./acyclic 11 23 34 41 &
+./acyclic 11 23 42 52 &
+./acyclic 11 24 1 7 &
+./acyclic 11 24 8 14 &
+./acyclic 11 24 15 21 &
+./acyclic 11 24 22 28 &
+./acyclic 11 24 29 35 &
+./acyclic 11 24 36 42 &
+./acyclic 11 24 43 49 &
+./acyclic 11 24 50 56 &
+./acyclic 11 24 57 63 &
+./acyclic 11 24 64 69 &
+./acyclic 11 25 1 8 &
+./acyclic 11 25 9 16 &
+./acyclic 11 25 17 24 &
+./acyclic 11 25 25 32 &
+./acyclic 11 25 33 40 &
+./acyclic 11 25 41 48 &
+./acyclic 11 25 49 56 &
+./acyclic 11 25 57 64 &
+./acyclic 11 25 65 72 &
+./acyclic 11 25 73 86 &
+./acyclic 11 26 1 9 &
+./acyclic 11 26 10 18 &
+./acyclic 11 26 19 27 &
+./acyclic 11 26 28 36 &
+./acyclic 11 26 37 45 &
+./acyclic 11 26 46 54 &
+./acyclic 11 26 55 63 &
+./acyclic 11 26 64 72 &
+./acyclic 11 26 73 81 &
+./acyclic 11 26 82 90 &
+./acyclic 11 26 91 99 &
+./acyclic 11 27 1 9 &
+./acyclic 11 27 10 18 &
+./acyclic 11 27 19 27 &
+./acyclic 11 27 28 36 &
+./acyclic 11 27 37 45 &
+./acyclic 11 27 46 54 &
+./acyclic 11 27 55 63 &
+./acyclic 11 27 64 72 &
+./acyclic 11 27 73 81 &
+./acyclic 11 27 81 90 &
+./acyclic 11 27 91 99 &
+./acyclic 11 27 100 106 &
+./acyclic 11 28 1 9 &
+./acyclic 11 28 10 18 &
+./acyclic 11 28 19 27 &
+./acyclic 11 28 28 36 &
+./acyclic 11 28 37 45 &
+./acyclic 11 28 46 54 &
+./acyclic 11 28 55 63 &
+./acyclic 11 28 64 72 &
+./acyclic 11 28 73 81 &
+./acyclic 11 28 81 90 &
+./acyclic 11 28 91 99 &
+./acyclic 11 28 100 106 &
+./acyclic 11 29 1 9 &
+./acyclic 11 29 10 18 &
+./acyclic 11 29 19 27 &
+./acyclic 11 29 28 36 &
+./acyclic 11 29 37 45 &
+./acyclic 11 29 46 54 &
+./acyclic 11 29 55 63 &
+./acyclic 11 29 64 72 &
+./acyclic 11 29 73 81 &
+./acyclic 11 29 82 90 &
+./acyclic 11 29 91 99 &
+./acyclic 11 30 1 8 &
+./acyclic 11 30 9 16 &
+./acyclic 11 30 17 24 &
+./acyclic 11 30 25 32 &
+./acyclic 11 30 33 40 &
+./acyclic 11 30 41 48 &
+./acyclic 11 30 49 56 &
+./acyclic 11 30 57 64 &
+./acyclic 11 30 65 72 &
+./acyclic 11 30 73 87 &
+./acyclic 11 31 1 7 &
+./acyclic 11 31 8 14 &
+./acyclic 11 31 15 21 &
+./acyclic 11 31 22 28 &
+./acyclic 11 31 29 35 &
+./acyclic 11 31 36 42 &
+./acyclic 11 31 43 49 &
+./acyclic 11 31 50 56 &
+./acyclic 11 31 57 63 &
+./acyclic 11 31 64 70 &
+./acyclic 11 32 1 7 &
+./acyclic 11 32 8 14 &
+./acyclic 11 32 15 21 &
+./acyclic 11 32 22 28 &
+./acyclic 11 32 29 35 &
+./acyclic 11 32 36 42 &
+./acyclic 11 32 43 49 &
+./acyclic 11 32 50 54 &
+./acyclic 11 33 1 8 &
+./acyclic 11 33 9 16 &
+./acyclic 11 33 17 24 &
+./acyclic 11 33 25 32 &
+./acyclic 11 33 33 38 &
+./acyclic 11 34 1 8 &
+./acyclic 11 34 9 16 &
+./acyclic 11 34 17 25 &
+./acyclic 11 35 1 8 &
+./acyclic 11 35 9 16 &
+./acyclic 11 36 1 9 &
+./acyclic 11 37 1 5 &
+./acyclic 11 38 1 3 &
+./acyclic 11 39 1 2 &
+./acyclic 11 40 &
+./acyclic 11 41 &
+./acyclic 11 42 &
+./acyclic 11 43 &
+./acyclic 11 44 &
+./acyclic 11 45 &
+./acyclic 11 46 &
+./acyclic 11 47 &
+./acyclic 11 48 &
+./acyclic 11 49 &
+./acyclic 11 50 &
+./acyclic 11 51 &
+./acyclic 11 52 &
+./acyclic 11 53 &
+./acyclic 11 54 &
+./acyclic 11 55 &
