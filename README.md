@@ -19,7 +19,17 @@ Additionally, we have introduced a slight variant to the g6 format. This consist
 
 Compiling and running the program [split.cpp](split.cpp), the file structure contained in the `cg` folder will be generated containing the graphs in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities.
 
-**Note**: In the code one should indicate the operating system of your choice: 0 for GNU/Linux or 1 for Microsoft Windows.
+Under GNU/Linux can be used the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be complied and executed in the terminal as:
+```
+> g++ split.cpp -o split
+> ./splitsplit 
+```
+We have used the following version of the compiler:
+```
+> g++ --version
+g++ (Debian 10.2.1-6) 10.2.1 20210110
+```
+In a laptop with a processor Intel(R) Xeon(R) CPU E3-1535M v6 @ 3.10GHz, the execution of the script `split.cpp` takes about 25 minutes, no more than 4 GB of RAM, and the output consists of 1169 files distributed in 34 sub-folders in `./cg`, with a total size of 10.4 GiB.
 
 The working folder is where the `cg` folder is located. From now on, all graphs are stored in \_g6 format.
 
