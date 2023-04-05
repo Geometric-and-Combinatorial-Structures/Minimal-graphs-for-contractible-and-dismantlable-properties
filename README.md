@@ -156,7 +156,13 @@ The program [Windows/CheckAxiom.cpp](./Windows/CheckAxiom.cpp), as well as [GNU-
 The full process takes a few seconds.
 
 ## Acyclic graphs that are not 0-dismantable
-We obtain these graphs by compiling and running the program [ag_Not0Dis.cpp](ag_Not0Dis.cpp).  The resulting 7 graphs are in [ag_Not0Dis.dat](ag_Not0Dis.dat) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
+We obtain these graphs by compiling and running the program [Windows/1dismtbl-0dismtbl.cpp](./Windows/1dismtbl-0dismtbl.cpp) under Windows, or [GNU-Linux/1dismtbl-0dismtbl.cpp](./GNU-Linux/1dismtbl-0dismtbl.cpp) under GNU/Linux as follows:
+```
+> g++ 1dismtbl-0dismtbl.cpp -o 1dismtbl-0dismtbl
+> ./1dismtbl-0dismtbl
+```
+
+The resulting 7 graphs are in the outpu file `1dismtbl-0dismtbl.dat` (available here [Windows/1dismtbl-0dismtbl.dat](./Windows/1dismtbl-0dismtbl.dat) and here [GNU-Linux/1dismtbl-0dismtbl.dat](./GNU-Linux/1dismtbl-0dismtbl.dat)) and corresponds to the graphs depicted in Figure 5 of the article [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
 ![Figure 5.](./images/Fig-5.PNG "Figure 5.")
 **Figure 5.** The smallest graphs that are 1-dismantlable (and hence strong vertex I-contractible) but not 0-dismantlable.
