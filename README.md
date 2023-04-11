@@ -1,6 +1,6 @@
 # Minimal graphs for contractible and dismantlable properties
 In this repository we demonstrate how to implement the algorithms used in the article *Minimal graphs for contractible and dismantlable properties*
- ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1:
+ ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1 of that paper:
  
  ![Table 1.](./images/Table-1.png "Table 1.")
 **Table 1.** Contractible and dismantlable classes of graphs on at most 11 vertices.
@@ -8,21 +8,21 @@ In this repository we demonstrate how to implement the algorithms used in the ar
 This work considers simple connected graphs on up to 11 vertices.
 
 ## Connected graphs
-The connected graphs were taken from the well-known repository of Professor Brendan McKay (available online at [Graphs](https://users.cecs.anu.edu.au/~bdm/data/graphs.html)). There the graphs are organized into files according to the number of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
+A list of connected graphs on up to 11 vertices was obtained from the well-known repository of Professor Brendan McKay (available online at [Graphs](https://users.cecs.anu.edu.au/~bdm/data/graphs.html)). There the graphs are organized into files according to the number of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
 
 **Remark**: The file `graph11.g6` contains connected and disconnected graphs, the other ones consist only of connected graphs.
 
 For more details about the g6 format (among other aspects) consult: [graph formats](https://users.cecs.anu.edu.au/~bdm/data/formats.html).
 
 ## Setup files 
-To facilitate the work we have further divided the files according to how many edges the graphs have. For files with graphs of 11 vertices with more than one million graphs, we have created a folder that contains several files of at most one million graphs. The first of these files are
+To facilitate our work we have further divided the files according to how many edges the graphs have. For graphs with 11 vertices, we have created a folder that contains several files of at most one million graphs. The first of these files are
 `11v17e-001` and `11v17e-002`.
 
 Additionally, we have introduced a slight variant to the g6 format. This consists of ignoring the data that indicates the number of vertices, called N(n) by McKay. We have called this format \_g6. The number of vertices is known based on which file the graph comes from.
 
-Compiling and running the program [Windows/split.cpp](./Windows/split.cpp), the file structure contained in the `cg` folder will be generated containing the connected graphs up to 11 vertices in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities. The output of such script is written in the second column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
+When compiling and running the program [Windows/split.cpp](./Windows/split.cpp), the file structure contained in the `cg` folder will be generated containing the connected graphs up to 11 vertices in \_g6 format, as well as the files `#cgV.dat` and `#cgVE.dat` containing cardinalities. The output of this script is written in the second column in Table 1 of the paper *Minimal graphs for contractible and dismantlable properties* ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)).
 
-Under GNU/Linux can be used the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be compiled and executed in the terminal (command line) as:
+Running GNU/Linux one can use the script [GNU-Linux/split.cpp](./GNU-Linux/split.cpp), which can be compiled and executed in the terminal (command line) as:
 ```
 > g++ split.cpp -o split
 > ./split
@@ -37,7 +37,7 @@ In a laptop with a processor Intel(R) Xeon(R) CPU E3-1535M v6 @ 3.10GHz, the exe
 The working folder is where the `cg` folder is located. From now on, all graphs are stored in \_g6 format.
 
 ## Acyclic graphs
-We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser) program in order to generate acyclic graphs (that is graphs whose clique complex have trivial homology over Z/2Z).
+We have produced an adaptation of the [Ripser](https://github.com/Ripser/ripser) program in order to generate acyclic graphs (that is, graphs whose clique complex have trivial homology with Z/2Z coefficients).
 
 Compiling and running the program [Windows/acyclic.cpp](./Windows/acyclic.cpp) a directories structure will be generated in the `ag` folder containing all acyclic graphs on the specified number of vertices (and edges, if desired).
 
