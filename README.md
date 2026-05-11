@@ -1,6 +1,6 @@
 #  Minimal graphs for contractible and dismantlable properties
 In this repository we demonstrate how to implement the algorithms used in the article *Minimal graphs for contractible and dismantlable properties*
- ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1 of that paper:
+ ((https://www.sciencedirect.com/science/article/abs/pii/S0012365X23002029) or [arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1 of that paper:
  
  ![Table 1.](./images/Table-1.png "Table 1.")
 **Table 1.** Contractible and dismantlable classes of graphs on at most 11 vertices.
