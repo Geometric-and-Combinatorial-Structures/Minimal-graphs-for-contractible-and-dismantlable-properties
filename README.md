@@ -1,13 +1,13 @@
-# Minimal graphs for contractible and dismantlable properties
+#  Minimal graphs for contractible and dismantlable properties
 In this repository we demonstrate how to implement the algorithms used in the article *Minimal graphs for contractible and dismantlable properties*
- ([arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1 of that paper:
+ ([Discrete Mathematics:113516](https://www.sciencedirect.com/science/article/abs/pii/S0012365X23002029) or [arXiv:2109.06729 [math.CO]](https://arxiv.org/abs/2109.06729)), in order to obtain the numbers listed in Table 1 of that paper:
  
  ![Table 1.](./images/Table-1.png "Table 1.")
 **Table 1.** Contractible and dismantlable classes of graphs on at most 11 vertices.
 
 This work considers simple connected graphs on up to 11 vertices.
 
-## Connected graphs
+##  Connected graphs
 A list of connected graphs on up to 11 vertices was obtained from the well-known repository of Professor Brendan McKay (available online at [Graphs](https://users.cecs.anu.edu.au/~bdm/data/graphs.html)). There the graphs are organized into files according to the number of vertices: `graph2c.g6`, `graph3c.g6`, ... , `graph10c.g6`, `graph11.g6`. The last two files need to be unzipped due to their size.
 
 **Remark**: The file `graph11.g6` contains connected and disconnected graphs, the other ones consist only of connected graphs.
